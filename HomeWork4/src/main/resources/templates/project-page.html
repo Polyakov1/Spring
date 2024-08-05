@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Project Details</title>
+</head>
+<body>
+<h1>Project Details</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <!-- Добавьте другие необходимые поля -->
+    </tr>
+    <tr>
+        <td th:text="${project.id}"></td>
+        <td th:text="${project.name}"></td>
+        <td th:text="${project.description}"></td>
+        <!-- Добавьте другие поля -->
+    </tr>
+</table>
+<td>
+    <a th:href="@{/projects/{id}(id=${timesheet.projectId})}" th:text="${timesheet.projectName}"></a>
+</td>
+</body>
+</html>
